@@ -9,7 +9,7 @@ import {
 import React, { useState } from 'react';
 import ListPokemones from './components/ListPokemones/ListPokemones';
 import ListGeneraciones from './components/ListGeneraciones/ListGeneraciones';
-
+import Ionicons from '@expo/vector-icons/Ionicons';
 const Pokemones = () => {
   const [text, setText] = useState('');
 
@@ -28,19 +28,29 @@ const Pokemones = () => {
           paddingHorizontal: 20,
           paddingBottom: 10,
         }}>
-        <TextInput
+        <View
           style={{
-            backgroundColor: '#fff',
-            borderRadius: 12,
             width: '100%',
-            padding: 10,
-            fontSize: 14,
-            marginVertical: 10,
-          }}
-          placeholder='Buscar por Id o nombre'
-          onChangeText={(newText) => setText(newText)}
-          defaultValue={text}
-        />
+            flexDirection: 'row',
+            alignItems: 'center',
+          }}>
+          <TouchableOpacity style={{ width: '15%' }}>
+            <Ionicons name='chevron-back' size={30} color='#fff' />
+          </TouchableOpacity>
+          <TextInput
+            style={{
+              backgroundColor: '#fff',
+              borderRadius: 12,
+              padding: 10,
+              width: '85%',
+              fontSize: 14,
+              marginVertical: 10,
+            }}
+            placeholder='Buscar por Id o nombre'
+            onChangeText={(newText) => setText(newText)}
+            defaultValue={text}
+          />
+        </View>
         <ListGeneraciones />
         {/* <ListPokemones /> */}
       </View>
