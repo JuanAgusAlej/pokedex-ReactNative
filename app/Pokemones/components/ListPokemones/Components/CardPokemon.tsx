@@ -27,7 +27,7 @@ const CardPokemon = ({
         }}>
         <Image
           source={img}
-          contentFit='scale-down'
+          contentFit='contain'
           style={{ width: '60%', height: '60%' }}
         />
         <Text style={{ fontSize: 15 }}>{name}</Text>

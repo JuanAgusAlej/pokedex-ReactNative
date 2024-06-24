@@ -6,7 +6,7 @@ export const fakeDataPokemons = [
     },
     {
         id: 1,
-        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png" ,
+        img: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/showdown/1.gif" ,
         name: "bulbasaur"
     },
     {
