@@ -1,11 +1,4 @@
-import {
-  ScrollView,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
+import { StyleSheet, TextInput, TouchableOpacity, View } from 'react-native';
 import React, { useState } from 'react';
 import ListPokemones from './components/ListPokemones/ListPokemones';
 import ListGeneraciones from './components/ListGeneraciones/ListGeneraciones';
@@ -29,7 +22,7 @@ const Pokemones = () => {
           paddingHorizontal: 20,
           paddingBottom: 10,
         }}>
-        {
+        {false && (
           <View
             style={{
               width: '100%',
@@ -53,10 +46,10 @@ const Pokemones = () => {
               defaultValue={text}
             />
           </View>
-        }
-        {/* <Pokemon /> */}
+        )}
+        <Pokemon />
         {/* <ListGeneraciones /> */}
-        <ListPokemones />
+        {/* <ListPokemones /> */}
       </View>
     </>
   );
