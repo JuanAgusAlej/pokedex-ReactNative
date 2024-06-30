@@ -1,6 +1,7 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import React from 'react';
 import { Image } from 'expo-image';
+import { useRouter } from 'expo-router';
 
 const CardPokemon = ({
   id,
@@ -11,8 +12,10 @@ const CardPokemon = ({
   name: string;
   img: string;
 }) => {
+  const router = useRouter();
   return (
     <TouchableOpacity
+      onPress={() => router.push('/Pokemon')}
       style={{
         backgroundColor: '#fff',
         width: '30%',
